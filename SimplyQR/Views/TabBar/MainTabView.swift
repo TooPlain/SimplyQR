@@ -17,13 +17,8 @@ struct MainTabView: View {
                 Image(systemName: "qrcode.viewfinder")
             }
             
-//            NavigationStack {
-//                //GalleryScanView()
-//            }
-//            .tabItem { Image(systemName: "photo.on.rectangle.angled") }
-            
             NavigationStack {
-                //ExploreView()
+                ScanHistoryView()
             }
             .tabItem {
                 Image(systemName: "clock")

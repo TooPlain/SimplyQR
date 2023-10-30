@@ -17,8 +17,6 @@
 		4E9936BE2AEFD515001C31FA /* ScanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936BD2AEFD515001C31FA /* ScanManager.swift */; };
 		4E9936C02AEFD539001C31FA /* ScanHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936BF2AEFD539001C31FA /* ScanHistoryViewModel.swift */; };
 		4E9936C32AEFD589001C31FA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */; };
-		4E9936C62AEFD788001C31FA /* GalleryScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936C52AEFD788001C31FA /* GalleryScanView.swift */; };
-		4E9936C92AEFDAFE001C31FA /* GalleryScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936C82AEFDAFE001C31FA /* GalleryScanViewModel.swift */; };
 		4E9936CB2AEFE7DC001C31FA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4E9936CA2AEFE7DC001C31FA /* README.md */; };
 		4EDE55022AE7DD34002386E7 /* SimplyQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDE55012AE7DD34002386E7 /* SimplyQRApp.swift */; };
 		4EDE55042AE7DD34002386E7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDE55032AE7DD34002386E7 /* RootView.swift */; };
@@ -36,8 +34,6 @@
 		4E9936BD2AEFD515001C31FA /* ScanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanManager.swift; sourceTree = "<group>"; };
 		4E9936BF2AEFD539001C31FA /* ScanHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHistoryViewModel.swift; sourceTree = "<group>"; };
 		4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = SimplyQR/Views/Settings/SettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
-		4E9936C52AEFD788001C31FA /* GalleryScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScanView.swift; sourceTree = "<group>"; };
-		4E9936C82AEFDAFE001C31FA /* GalleryScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScanViewModel.swift; sourceTree = "<group>"; };
 		4E9936CA2AEFE7DC001C31FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E9936CC2AEFE8A2001C31FA /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4EAE21DE2AE7E36500133604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -83,9 +79,7 @@
 		4E9936A72AEFC236001C31FA /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
-				4E9936C72AEFDAF0001C31FA /* vm */,
 				4E9936AF2AEFC5BB001C31FA /* ScannerView.swift */,
-				4E9936C52AEFD788001C31FA /* GalleryScanView.swift */,
 			);
 			path = Scanner;
 			sourceTree = "<group>";
@@ -141,20 +135,12 @@
 			path = vm;
 			sourceTree = "<group>";
 		};
-		4E9936C72AEFDAF0001C31FA /* vm */ = {
-			isa = PBXGroup;
-			children = (
-				4E9936C82AEFDAFE001C31FA /* GalleryScanViewModel.swift */,
-			);
-			path = vm;
-			sourceTree = "<group>";
-		};
 		4EDE54F52AE7DD34002386E7 = {
 			isa = PBXGroup;
 			children = (
 				4EDE55002AE7DD34002386E7 /* SimplyQR */,
-				4E9936CC2AEFE8A2001C31FA /* LICENSE */,
 				4E9936CA2AEFE7DC001C31FA /* README.md */,
+				4E9936CC2AEFE8A2001C31FA /* LICENSE */,
 				4EDE54FF2AE7DD34002386E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -266,9 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9936C62AEFD788001C31FA /* GalleryScanView.swift in Sources */,
 				4EDE55042AE7DD34002386E7 /* RootView.swift in Sources */,
-				4E9936C92AEFDAFE001C31FA /* GalleryScanViewModel.swift in Sources */,
 				4E9936AA2AEFC27C001C31FA /* SettingsView.swift in Sources */,
 				4E9936BC2AEFD1F4001C31FA /* ScanHistoryManager.swift in Sources */,
 				4E9936BE2AEFD515001C31FA /* ScanManager.swift in Sources */,

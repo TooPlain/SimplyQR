@@ -11,7 +11,9 @@ import SwiftUI
 
 struct ScanHistoryView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List{
+            Text("Historic Scan Data Results will be displayed here").monospaced()
+        }
     }
 }
 
