@@ -30,3 +30,9 @@ Sorted by Priority (High to Low)
 - Create a existing photo scan flow
 - Implement a error handling/crashlytics
 - Maybe a update check
+
+
+# Credits
+
+Currently I'm utilizing [CodeScanner](https://github.com/twostraws/CodeScanner) lib which was made by Paul Hudson, who writes free Swift tutorials over at Hacking with Swift but I do plan on creating my own as I get more comfortable with Swift. 
+It’s available under the MIT license, which permits commercial use, modification, distribution, and private use.
