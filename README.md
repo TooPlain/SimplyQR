@@ -8,7 +8,11 @@ After some thinking I'm leaning towards using functions provided by apple to sto
 
 My first attempt at a public project I hope to learn alot while publishing my code such as workflows and automated testing.
 Hopefully I don't dump my own creds/keys by accident.
-Thanks for checking out my project!
+
+Once sort of complete will publish to the app store - way too many ad infested qr code scanners other then I guess the main apple ios camera app for scanning :p but hey its a just a practice project to boost morale lol
+
+Thanks for stopping by and checking out my project!
+
 
 # Timeline
 
