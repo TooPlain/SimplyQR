@@ -27,5 +27,6 @@ Sorted by Priority (High to Low)
 
 - Create a History View
 - Create a Settings View
+- Create a existing photo scan flow
 - Implement a error handling/crashlytics
 - Maybe a update check
