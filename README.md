@@ -4,7 +4,7 @@
 Simply(no tracking/ads) a Open Source Swift-powered QR Code reader with the future option to also scan existing photos from your phone, I do
 hope to eventually include other barcode standards that might be useful in a offline context.
 
-Will try to only implement Crashlytics for crash reporting so I can hopefully identify any bugs that may arise, etc.
+After some thinking I'm leaning towards using functions provided by apple to store scan history and handle crash analytics iirc I think they do provide that service, Instead of using firebase.
 
 My first attempt at a public project I hope to learn alot while publishing my code such as workflows and automated testing.
 Hopefully I don't dump my own creds/keys by accident.
@@ -12,11 +12,16 @@ Thanks for checking out my project!
 
 # Timeline
 
-10/30 Currently working on creating a hopefully nice looking scanner view
+10/30 
+- Starting history view deciding if we should store history as a user object in firebase or just locally like in a db leaning towards the latter.
+- Basic Scanner works with thanks to the folks at hacking swift via there CodeScanner Lib, 
+Will have to learn more to eventually implement my own scanning functionality.
+
 
 # TODO
 Sorted by Priority (High to Low)
 
-Create a settings view
-Implment a error handling/crashlytics
-Maybe a update check
+- Create a History View
+- Create a Settings View
+- Implement a error handling/crashlytics
+- Maybe a update check
