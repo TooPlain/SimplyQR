@@ -9,27 +9,26 @@ import SwiftUI
 import CodeScanner
 
 struct ScannerView: View {
-    @State private var isPresentingScanner = false
+    @State private var isPresentingAlert = false
     @State private var scannedCode: String?
 
+    //Maybe since we have a tab bar call this view directly?
+    
+    // TODO: Implment handling links, etc
     var body: some View {
-        VStack(spacing: 10) {
-            if let code = scannedCode {
-               // NavigationLink("Next page", destination: NextView(scannedCode: code), isActive: .constant(true)).hidden()
+        
+        //For now a dialog with the scanned information for display and the option to copy to clipboard.
+        
+        CodeScannerView(codeTypes: [.qr,.ean13,.code128,.dataMatrix,.pdf417], showViewfinder: true) { response in
+            if case let .success(result) = response {
+                scannedCode = result.string
+                isPresentingAlert = true
             }
-
-            Button("Scan Code") {
-                isPresentingScanner = true
-            }
-
-            Text("Scan a QR code to begin")
-        }
-        .sheet(isPresented: $isPresentingScanner) {
-            CodeScannerView(codeTypes: [.qr]) { response in
-                if case let .success(result) = response {
-                    scannedCode = result.string
-                    isPresentingScanner = false
-                }
+        }.alert(scannedCode ?? "Nul", isPresented: $isPresentingAlert) {
+            Button("Okay", role: .cancel) {isPresentingAlert = false}
+            Button("Copy Clipboard"){
+                UIPasteboard.general.string = scannedCode
+                isPresentingAlert = false
             }
         }
     }
