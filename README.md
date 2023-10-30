@@ -14,16 +14,15 @@ Thanks for checking out my project!
 # Timeline
 
 10/30 
--Starting history view deciding if we should store history as a user object in firebase or just locally like in a db leaning towards the latter.
-
--Basic Scanner works with thanks to the folks at hacking swift via there CodeScanner Lib, 
+- Starting history view deciding if we should store history as a user object in firebase or just locally like in a db leaning towards the latter.
+- Basic Scanner works with thanks to the folks at hacking swift via there CodeScanner Lib, 
 Will have to learn more to eventually implement my own scanning functionality.
 
 
 # TODO
 Sorted by Priority (High to Low)
 
-Create a History View
-Create a Settings View
-Implement a error handling/crashlytics
-Maybe a update check
+- Create a History View
+- Create a Settings View
+- Implement a error handling/crashlytics
+- Maybe a update check
