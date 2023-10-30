@@ -11,9 +11,11 @@ import SwiftUI
 
 struct ScanHistoryView: View {
     var body: some View {
-        List{
-            Text("Historic Scan Data Results will be displayed here").monospaced()
-        }
+        VStack {
+            List{
+                Text("Historic Scan Data Results will be displayed here").monospaced()
+            }
+        }.navigationTitle("History")
     }
 }
 
