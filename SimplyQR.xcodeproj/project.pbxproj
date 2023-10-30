@@ -18,6 +18,7 @@
 		4E9936C02AEFD539001C31FA /* ScanHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936BF2AEFD539001C31FA /* ScanHistoryViewModel.swift */; };
 		4E9936C32AEFD589001C31FA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */; };
 		4E9936CB2AEFE7DC001C31FA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4E9936CA2AEFE7DC001C31FA /* README.md */; };
+		4E9936CE2AEFF5AC001C31FA /* HistoricScanResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936CD2AEFF5AC001C31FA /* HistoricScanResultsModel.swift */; };
 		4EDE55022AE7DD34002386E7 /* SimplyQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDE55012AE7DD34002386E7 /* SimplyQRApp.swift */; };
 		4EDE55042AE7DD34002386E7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDE55032AE7DD34002386E7 /* RootView.swift */; };
 		4EDE55062AE7DD35002386E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EDE55052AE7DD35002386E7 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = SimplyQR/Views/Settings/SettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		4E9936CA2AEFE7DC001C31FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E9936CC2AEFE8A2001C31FA /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4E9936CD2AEFF5AC001C31FA /* HistoricScanResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricScanResultsModel.swift; sourceTree = "<group>"; };
 		4EAE21DE2AE7E36500133604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4EDE54FE2AE7DD34002386E7 /* SimplyQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplyQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDE55012AE7DD34002386E7 /* SimplyQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplyQRApp.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				4E9936BB2AEFD1F4001C31FA /* ScanHistoryManager.swift */,
+				4E9936CD2AEFF5AC001C31FA /* HistoricScanResultsModel.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				4E9936BE2AEFD515001C31FA /* ScanManager.swift in Sources */,
 				4E9936B02AEFC5BB001C31FA /* ScannerView.swift in Sources */,
 				4EDE55022AE7DD34002386E7 /* SimplyQRApp.swift in Sources */,
+				4E9936CE2AEFF5AC001C31FA /* HistoricScanResultsModel.swift in Sources */,
 				4E9936B62AEFCE04001C31FA /* ScanHistoryView.swift in Sources */,
 				4E9936C02AEFD539001C31FA /* ScanHistoryViewModel.swift in Sources */,
 				4E9936C32AEFD589001C31FA /* SettingsViewModel.swift in Sources */,

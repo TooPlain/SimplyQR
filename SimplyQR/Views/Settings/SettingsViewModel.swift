@@ -6,10 +6,16 @@
 //
 
 import Foundation
+import AVFoundation
 
 // TODO: Settings related to maybe scan history and sending crash data. Not much to add since no tracking of users or anything of that nature. maybe a array of scannable barcodes.
 @MainActor
 final class SettingsViewModel: ObservableObject {
     
+    @Published var scanTypes : [AVMetadataObject.ObjectType]
+    
+    init() {
+        scanTypes = [.qr]
+    }
     
 }

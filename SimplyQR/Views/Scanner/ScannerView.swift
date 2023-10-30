@@ -18,7 +18,7 @@ struct ScannerView: View {
     @State private var isTorchOn = false
 
     //Maybe since we have a tab bar call this view directly?
-    
+
     // TODO: Implment handling links, etc
     var body: some View {
         
@@ -27,9 +27,10 @@ struct ScannerView: View {
         // Work on failure handling when scan code is malformed etc
         NavigationStack{
             VStack{
-                CodeScannerView(codeTypes: [.qr,.ean13,.code128,.dataMatrix,.pdf417],isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
+                CodeScannerView(codeTypes: SettingsViewModel().scanTypes,scanMode: .continuous, scanInterval: 1.5 ,isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
                     if case let .success(result) = response {
                         scannedCode = result.string
+                        // Create history record here
                         isPresentingAlert = true
                     }
                 }.alert(scannedCode ?? "Nul", isPresented: $isPresentingAlert) {
@@ -49,12 +50,8 @@ struct ScannerView: View {
                 } label: {
                     Image(systemName: "flashlight.on.fill")
                 }
-
             }
             ToolbarItem(placement: .topBarTrailing) {
-//                PhotosPicker(selection: $selectedItem, matching: .images, photoLibrary: .shared()) {
-//                    Image(systemName: "photo.on.rectangle.angled")
-//                }
                 Button {
                     isPresetingPicker = !isPresetingPicker
                 } label: {
