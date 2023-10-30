@@ -152,9 +152,9 @@
 		4EDE54F52AE7DD34002386E7 = {
 			isa = PBXGroup;
 			children = (
+				4EDE55002AE7DD34002386E7 /* SimplyQR */,
 				4E9936CC2AEFE8A2001C31FA /* LICENSE */,
 				4E9936CA2AEFE7DC001C31FA /* README.md */,
-				4EDE55002AE7DD34002386E7 /* SimplyQR */,
 				4EDE54FF2AE7DD34002386E7 /* Products */,
 			);
 			sourceTree = "<group>";
