@@ -7,7 +7,7 @@
 
 import Foundation
 
-// TODO: Settings related to maybe scan history and sending crash data. Not much to add since no tracking of users or anything of that nature.
+// TODO: Settings related to maybe scan history and sending crash data. Not much to add since no tracking of users or anything of that nature. maybe a array of scannable barcodes.
 @MainActor
 final class SettingsViewModel: ObservableObject {
     

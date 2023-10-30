@@ -18,7 +18,6 @@ struct ScannerView: View {
     var body: some View {
         
         //For now a dialog with the scanned information for display and the option to copy to clipboard.
-        
         CodeScannerView(codeTypes: [.qr,.ean13,.code128,.dataMatrix,.pdf417], showViewfinder: true) { response in
             if case let .success(result) = response {
                 scannedCode = result.string
