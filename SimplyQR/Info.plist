@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Need  to use the camera in order to scan for client&apos;s qr or other barcode standards.</string>
+	<string>Need to use the camera in order to scan for qr or other barcode standards.</string>
 </dict>
 </plist>
