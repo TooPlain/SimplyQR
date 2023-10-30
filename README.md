@@ -25,9 +25,9 @@ Will have to learn more to eventually implement my own scanning functionality.
 # TODO
 Sorted by Priority (High to Low)
 
-- Create a History View
+- Create a History View - work in progress
 - Create a Settings View
-- Create a existing photo scan flow
+- Create a existing photo scan flow - work in progress
 - Implement a error handling/crashlytics
 - Maybe a update check
 
