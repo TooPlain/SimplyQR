@@ -17,6 +17,8 @@
 		4E9936BE2AEFD515001C31FA /* ScanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936BD2AEFD515001C31FA /* ScanManager.swift */; };
 		4E9936C02AEFD539001C31FA /* ScanHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936BF2AEFD539001C31FA /* ScanHistoryViewModel.swift */; };
 		4E9936C32AEFD589001C31FA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */; };
+		4E9936C62AEFD788001C31FA /* GalleryScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936C52AEFD788001C31FA /* GalleryScanView.swift */; };
+		4E9936C92AEFDAFE001C31FA /* GalleryScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936C82AEFDAFE001C31FA /* GalleryScanViewModel.swift */; };
 		4EDE55022AE7DD34002386E7 /* SimplyQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDE55012AE7DD34002386E7 /* SimplyQRApp.swift */; };
 		4EDE55042AE7DD34002386E7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDE55032AE7DD34002386E7 /* RootView.swift */; };
 		4EDE55062AE7DD35002386E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EDE55052AE7DD35002386E7 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		4E9936BD2AEFD515001C31FA /* ScanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanManager.swift; sourceTree = "<group>"; };
 		4E9936BF2AEFD539001C31FA /* ScanHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHistoryViewModel.swift; sourceTree = "<group>"; };
 		4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = SimplyQR/Views/Settings/SettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		4E9936C52AEFD788001C31FA /* GalleryScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScanView.swift; sourceTree = "<group>"; };
+		4E9936C82AEFDAFE001C31FA /* GalleryScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScanViewModel.swift; sourceTree = "<group>"; };
 		4EAE21DE2AE7E36500133604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4EDE54FE2AE7DD34002386E7 /* SimplyQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplyQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDE55012AE7DD34002386E7 /* SimplyQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplyQRApp.swift; sourceTree = "<group>"; };
@@ -76,7 +80,9 @@
 		4E9936A72AEFC236001C31FA /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				4E9936C72AEFDAF0001C31FA /* vm */,
 				4E9936AF2AEFC5BB001C31FA /* ScannerView.swift */,
+				4E9936C52AEFD788001C31FA /* GalleryScanView.swift */,
 			);
 			path = Scanner;
 			sourceTree = "<group>";
@@ -93,8 +99,8 @@
 		4E9936B42AEFCDF4001C31FA /* History */ = {
 			isa = PBXGroup;
 			children = (
+				4E9936C42AEFD5AC001C31FA /* vm */,
 				4E9936B52AEFCE04001C31FA /* ScanHistoryView.swift */,
-				4E9936BF2AEFD539001C31FA /* ScanHistoryViewModel.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -120,6 +126,22 @@
 			isa = PBXGroup;
 			children = (
 				4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */,
+			);
+			path = vm;
+			sourceTree = "<group>";
+		};
+		4E9936C42AEFD5AC001C31FA /* vm */ = {
+			isa = PBXGroup;
+			children = (
+				4E9936BF2AEFD539001C31FA /* ScanHistoryViewModel.swift */,
+			);
+			path = vm;
+			sourceTree = "<group>";
+		};
+		4E9936C72AEFDAF0001C31FA /* vm */ = {
+			isa = PBXGroup;
+			children = (
+				4E9936C82AEFDAFE001C31FA /* GalleryScanViewModel.swift */,
 			);
 			path = vm;
 			sourceTree = "<group>";
@@ -238,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9936C62AEFD788001C31FA /* GalleryScanView.swift in Sources */,
 				4EDE55042AE7DD34002386E7 /* RootView.swift in Sources */,
+				4E9936C92AEFDAFE001C31FA /* GalleryScanViewModel.swift in Sources */,
 				4E9936AA2AEFC27C001C31FA /* SettingsView.swift in Sources */,
 				4E9936BC2AEFD1F4001C31FA /* ScanHistoryManager.swift in Sources */,
 				4E9936BE2AEFD515001C31FA /* ScanManager.swift in Sources */,
