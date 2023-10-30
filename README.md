@@ -4,6 +4,8 @@
 Simply(no tracking/ads) a Open Source Swift-powered QR Code reader with the future option to also scan existing photos from your phone, I do
 hope to eventually include other barcode standards that might be useful in a offline context.
 
+Targets iOS 17.0+ mainly for the security updates I got to keep the end user secure! its a new age of tech and 0days be endless
+
 After some thinking I'm leaning towards using functions provided by apple to store scan history and handle crash analytics iirc I think they do provide that service, Instead of using firebase.
 
 My first attempt at a public project I hope to learn alot while publishing my code such as workflows and automated testing.
