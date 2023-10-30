@@ -2,7 +2,7 @@
 //  SimplyQRApp.swift
 //  SimplyQR
 //
-//  Created by parity on 10/24/23.
+//  Created by TooPlain on 10/24/23.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct SimplyQRApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
