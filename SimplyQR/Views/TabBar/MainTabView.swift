@@ -11,10 +11,10 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                //HomeView()
+                ScannerView()
             }
             .tabItem {
-                Image(systemName: "camera")
+                Image(systemName: "qrcode.viewfinder")
             }
             
             NavigationStack {
@@ -23,6 +23,7 @@ struct MainTabView: View {
             .tabItem {
                 Image(systemName: "clock")
             }
+            
             NavigationStack {
                 SettingsView()
             }
