@@ -13,9 +13,10 @@ import AVFoundation
 final class SettingsViewModel: ObservableObject {
     
     @Published var scanTypes : [AVMetadataObject.ObjectType]
-    
+    @Published var scanTypesString : [String]
     init() {
         scanTypes = [.qr]
+        scanTypesString = [".qr"]
     }
     
 }
