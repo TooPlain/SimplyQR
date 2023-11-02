@@ -14,6 +14,9 @@ final class SettingsViewModel: ObservableObject {
     
     @Published var scanTypes : [AVMetadataObject.ObjectType]
     @Published var scanTypesString : [String]
+    
+    @Published var saveScanData = false
+    
     init() {
         scanTypes = [.qr]
         scanTypesString = [".qr"]

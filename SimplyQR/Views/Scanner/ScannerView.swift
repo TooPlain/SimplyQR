@@ -25,30 +25,33 @@ struct ScannerView: View {
         // For now a dialog with the scanned information for display and the option to copy to clipboard.
         // Will add like a built in web browser view or handle if the text is a link for an app (eg discord,crypto wallet, etc)
         // Work on failure handling when scan code is malformed etc
+        // Make the UI nicer and figure out why there is a slight hick-up whenever selecting photo picker
         NavigationStack{
-            VStack{
                 CodeScannerView(codeTypes: SettingsViewModel().scanTypes,scanMode: .continuous, scanInterval: 1.5 ,isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
                     if case let .success(result) = response {
                         scannedCode = result.string
                         // Create history record here
                         isPresentingAlert = true
                     }
-                }.alert(scannedCode ?? "Nul", isPresented: $isPresentingAlert) {
-                    Button("Okay", role: .cancel) {
-                        isPresentingAlert = false
-                    }
-                    Button("Copy Clipboard"){
-                        UIPasteboard.general.string = scannedCode
-                        isPresentingAlert = false
-                    }
+            }.alert(scannedCode ?? "Nul", isPresented: $isPresentingAlert) {
+                Button("Okay", role: .cancel) {
+                    isPresentingAlert = false
+                }
+                Button("Copy Clipboard"){
+                    UIPasteboard.general.string = scannedCode
+                    isPresentingAlert = false
                 }
             }
         }.toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button {
                     isTorchOn = !isTorchOn
-                } label: {
-                    Image(systemName: "flashlight.on.fill")
+                } label: { 
+                    if(isTorchOn) {
+                        Image(systemName: "flashlight.on.fill")
+                    } else {
+                        Image(systemName: "flashlight.slash")
+                    }
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
