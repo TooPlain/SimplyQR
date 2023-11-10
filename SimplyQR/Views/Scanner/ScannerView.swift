@@ -16,15 +16,11 @@ struct ScannerView: View {
     @State private var isPresetingPicker = false
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var isTorchOn = false
-    @Environment(\.managedObjectContext) var moc
     
-    //let sort = NSSortDescriptor(key: "date_", ascending: true)
+    @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var scanhistories: FetchedResults<ScanHistory>
     
-
-
-    //Maybe since we have a tab bar call this view directly?
-
+    
     // TODO: Implment handling links, etc
     var body: some View {
         // For now a dialog with the scanned information for display and the option to copy to clipboard.
@@ -35,11 +31,11 @@ struct ScannerView: View {
                 CodeScannerView(codeTypes: SettingsViewModel().scanTypes,scanMode: .continuous, scanInterval: 1.5 ,isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
                     if case let .success(result) = response {
                         scannedCode = result.string
+                        // Create a check for if history is enabled of disabled
                         createScanRecord(name: nil, scandata: scannedCode!, date: Date())
-                        // Create history record here
                         isPresentingAlert = true
                     }
-            }.alert(scannedCode ?? "Nul", isPresented: $isPresentingAlert) {
+            }.alert(scannedCode ?? "Nill" /* Should Never Happen when presenting is true */, isPresented: $isPresentingAlert) {
                 Button("Okay", role: .cancel) {
                     isPresentingAlert = false
                 }
@@ -54,9 +50,9 @@ struct ScannerView: View {
                     isTorchOn = !isTorchOn
                 } label: { 
                     if(isTorchOn) {
-                        Image(systemName: "flashlight.on.fill")
+                        Image(systemName: "flashlight.on.fill").padding()
                     } else {
-                        Image(systemName: "flashlight.slash")
+                        Image(systemName: "flashlight.slash").padding()
                     }
                 }
             }
@@ -64,7 +60,7 @@ struct ScannerView: View {
                 Button {
                     isPresetingPicker = !isPresetingPicker
                 } label: {
-                    Image(systemName: "photo.on.rectangle.angled")
+                    Image(systemName: "photo.on.rectangle.angled").padding()
                 }
             }
         }
