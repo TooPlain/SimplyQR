@@ -10,8 +10,7 @@ import SwiftUI
 // Create a Scrollable Stack with a list of prior scan results and display each scan with Date, time and result.
 
 struct ScanHistoryView: View {
-    // TODO: Sort the history by date
-    @FetchRequest(sortDescriptors: []) var scanhistories: FetchedResults<ScanHistory>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "scantime", ascending: false)]) var scanhistories: FetchedResults<ScanHistory>
     @Environment(\.managedObjectContext) var moc
     
 
