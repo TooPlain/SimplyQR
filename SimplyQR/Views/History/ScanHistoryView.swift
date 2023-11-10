@@ -10,6 +10,7 @@ import SwiftUI
 // Create a Scrollable Stack with a list of prior scan results and display each scan with Date, time and result.
 
 struct ScanHistoryView: View {
+    @State var isShowingDeleteConfirmation = false
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "scantime", ascending: false)]) var scanhistories: FetchedResults<ScanHistory>
     @Environment(\.managedObjectContext) var moc
     
@@ -26,6 +27,7 @@ struct ScanHistoryView: View {
 //                    }
 //                }
 //            }
+        
         VStack {
             ScrollView(.vertical, showsIndicators: true) {
                 VStack {
@@ -44,16 +46,26 @@ struct ScanHistoryView: View {
                     }
                 }
             }
-            Button("Delete All", role: .destructive) {
-                deleteAll()
+            Button("Clear All", role: .destructive) {
+                isShowingDeleteConfirmation = true
             }.buttonStyle(.borderedProminent)
         }.navigationTitle("History")
+            .alert("This will clear ALL History!", isPresented: $isShowingDeleteConfirmation) {
+                Button("Cancel", role: .cancel) {
+                    isShowingDeleteConfirmation = false
+                }
+                Button("Okay",role: .destructive){
+                    deleteAll()
+                    isShowingDeleteConfirmation = false
+                }
+            }
     }
     
     func deleteAll() {
         for obj in scanhistories {
             moc.delete(obj)
         }
+        try? moc.save()
     }
 }
 
