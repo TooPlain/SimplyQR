@@ -8,9 +8,7 @@
 import SwiftUI
 import AVFoundation
 
-
-// Since learning about coredata I believe we can store our settings a in a coredata entity and with how easy it is to use should be easy to impl
-// TODO: Using CoreData to store setting values
+// TODO: Use AppStorage to set and get user settings
 struct SettingsView: View {
     @StateObject private var viewModel = SettingsViewModel()
     

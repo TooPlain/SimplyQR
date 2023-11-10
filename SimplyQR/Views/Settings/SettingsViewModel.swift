@@ -8,18 +8,20 @@
 import Foundation
 import AVFoundation
 
-// TODO: Settings related to maybe scan history and sending crash data. Not much to add since no tracking of users or anything of that nature. maybe a array of scannable barcodes.
+// TODO: Use AppStorage to store user settings and also create default settings
 @MainActor
 final class SettingsViewModel: ObservableObject {
     
-    @Published var scanTypes : [AVMetadataObject.ObjectType]
-    @Published var scanTypesString : [String]
+    @Published var scanTypes : [AVMetadataObject.ObjectType] // Scan Types
+    @Published var scanTypesString : [String] // In String format
+    @Published var saveScanResults = false // Save Scan History
     
-    @Published var saveScanData = false
-    
+    // Init User Defaults maybe?
     init() {
         scanTypes = [.qr]
         scanTypesString = [".qr"]
     }
+    
+    
     
 }

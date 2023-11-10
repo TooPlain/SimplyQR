@@ -10,11 +10,6 @@ import SwiftUI
 //App Delegate
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        // TODO: add crashlytics and it appears we might have to add firebase as a whole to use crash monitoring
-        //DEBUG Clear launch screen cache Will be removed once launch screen is complete
-        try! FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Library/SplashBoard")
-        
-        // DEBUG END
         return true
     }
     
@@ -27,7 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     // MARK: UISceneSession Lifecycle
-/*
+    /*
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
@@ -56,21 +51,20 @@ struct SimplyQRApp: App {
     }
 }
 
-
-extension Bundle {
-    var releaseVersionNumber: String? {
-        return infoDictionary?["CFBundleShortVersionString"] as? String
-    }
-    var buildVersionNumber: String? {
-        return infoDictionary?["CFBundleVersion"] as? String
-    }
-    var releaseVersionNumberPretty: String {
-        return "v\(releaseVersionNumber ?? "1.0.0")"
-    }
-}
+// Not in current use atm
+//extension Bundle {
+//    var releaseVersionNumber: String? {
+//        return infoDictionary?["CFBundleShortVersionString"] as? String
+//    }
+//    var buildVersionNumber: String? {
+//        return infoDictionary?["CFBundleVersion"] as? String
+//    }
+//    var releaseVersionNumberPretty: String {
+//        return "v\(releaseVersionNumber ?? "1.0.0")"
+//    }
+//}
 
 public extension UIApplication {
-
     func clearLaunchScreenCache() {
         do {
             try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Library/SplashBoard")
@@ -78,5 +72,4 @@ public extension UIApplication {
             print("Failed to delete launch screen cache: \(error)")
         }
     }
-
 }
