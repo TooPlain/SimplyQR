@@ -10,12 +10,12 @@
 		4E5B78D42AFE3D2B00A72E20 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B78D32AFE3D2B00A72E20 /* DataController.swift */; };
 		4E5B78D72AFE3F3E00A72E20 /* SimplyQR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B78D52AFE3F3E00A72E20 /* SimplyQR.xcdatamodeld */; };
 		4E5B78E32AFE6BD400A72E20 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B78E22AFE6BD400A72E20 /* ColorExt.swift */; };
+		4E5B78EB2AFE8F0E00A72E20 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B78EA2AFE8F0E00A72E20 /* Preferences.swift */; };
 		4E9936A62AEFC15D001C31FA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936A52AEFC15D001C31FA /* MainTabView.swift */; };
 		4E9936AA2AEFC27C001C31FA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936A92AEFC27C001C31FA /* SettingsView.swift */; };
 		4E9936B02AEFC5BB001C31FA /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936AF2AEFC5BB001C31FA /* ScannerView.swift */; };
 		4E9936B32AEFC6B1001C31FA /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 4E9936B22AEFC6B1001C31FA /* CodeScanner */; };
 		4E9936B62AEFCE04001C31FA /* ScanHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936B52AEFCE04001C31FA /* ScanHistoryView.swift */; };
-		4E9936C32AEFD589001C31FA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */; };
 		4E9936CB2AEFE7DC001C31FA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4E9936CA2AEFE7DC001C31FA /* README.md */; };
 		4EDE55022AE7DD34002386E7 /* SimplyQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDE55012AE7DD34002386E7 /* SimplyQRApp.swift */; };
 		4EDE55042AE7DD34002386E7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDE55032AE7DD34002386E7 /* RootView.swift */; };
@@ -27,11 +27,11 @@
 		4E5B78D32AFE3D2B00A72E20 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4E5B78D62AFE3F3E00A72E20 /* SimplyQR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimplyQR.xcdatamodel; sourceTree = "<group>"; };
 		4E5B78E22AFE6BD400A72E20 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
+		4E5B78EA2AFE8F0E00A72E20 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		4E9936A52AEFC15D001C31FA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		4E9936A92AEFC27C001C31FA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4E9936AF2AEFC5BB001C31FA /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		4E9936B52AEFCE04001C31FA /* ScanHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHistoryView.swift; sourceTree = "<group>"; };
-		4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = SimplyQR/Views/Settings/SettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		4E9936CA2AEFE7DC001C31FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E9936CC2AEFE8A2001C31FA /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4EAE21DE2AE7E36500133604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +59,7 @@
 			children = (
 				4E5B78D32AFE3D2B00A72E20 /* DataController.swift */,
 				4E5B78E22AFE6BD400A72E20 /* ColorExt.swift */,
+				4E5B78EA2AFE8F0E00A72E20 /* Preferences.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -94,7 +95,6 @@
 		4E9936A82AEFC23B001C31FA /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				4E9936C12AEFD575001C31FA /* vm */,
 				4E9936A92AEFC27C001C31FA /* SettingsView.swift */,
 			);
 			path = Settings;
@@ -106,14 +106,6 @@
 				4E9936B52AEFCE04001C31FA /* ScanHistoryView.swift */,
 			);
 			path = History;
-			sourceTree = "<group>";
-		};
-		4E9936C12AEFD575001C31FA /* vm */ = {
-			isa = PBXGroup;
-			children = (
-				4E9936C22AEFD589001C31FA /* SettingsViewModel.swift */,
-			);
-			path = vm;
 			sourceTree = "<group>";
 		};
 		4EDE54F52AE7DD34002386E7 = {
@@ -239,8 +231,8 @@
 				4E9936B02AEFC5BB001C31FA /* ScannerView.swift in Sources */,
 				4EDE55022AE7DD34002386E7 /* SimplyQRApp.swift in Sources */,
 				4E9936B62AEFCE04001C31FA /* ScanHistoryView.swift in Sources */,
-				4E9936C32AEFD589001C31FA /* SettingsViewModel.swift in Sources */,
 				4E5B78D42AFE3D2B00A72E20 /* DataController.swift in Sources */,
+				4E5B78EB2AFE8F0E00A72E20 /* Preferences.swift in Sources */,
 				4E9936A62AEFC15D001C31FA /* MainTabView.swift in Sources */,
 				4E5B78E32AFE6BD400A72E20 /* ColorExt.swift in Sources */,
 			);

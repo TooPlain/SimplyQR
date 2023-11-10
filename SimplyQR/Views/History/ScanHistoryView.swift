@@ -38,6 +38,7 @@ struct ScanHistoryView: View {
                 isShowingDeleteConfirmation = true
             }.buttonStyle(.borderedProminent)
         }.navigationTitle("History")
+            .padding(3)
             .alert("This will clear ALL History!", isPresented: $isShowingDeleteConfirmation) {
                 Button("Cancel", role: .cancel) {
                     isShowingDeleteConfirmation = false

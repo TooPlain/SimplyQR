@@ -8,24 +8,22 @@
 import SwiftUI
 import AVFoundation
 
-// TODO: Use AppStorage to set and get user settings
 struct SettingsView: View {
-    @StateObject private var viewModel = SettingsViewModel()
+    //@AppStorage(key: "save_scan_results", container: .standard, defaultValue: true) var saveScanResults: Bool
     
-    let scanTypeString: [String] = [".qr",".dataMatrix",".microQR",".pdf417",".microPDF417",".gs1DataBar"]
-    let scanTypeSelection: [AVMetadataObject.ObjectType] = [.qr,.dataMatrix,.microQR,.pdf417,.microPDF417,.gs1DataBar]
-    
-    private func scanTypeIsSelected(selected: AVMetadataObject.ObjectType) -> Bool {
-        viewModel.scanTypesString.contains(selected.rawValue) == true
-    }
+    @Preference(\.saveScanResults) var saveScanResults
+    @Preference(\.sendCrashReport) var sendCrashReport
     
     
     var body: some View {
         VStack {
-            List {
-                Text("Hello, Expect Settings in here :3").monospaced()
-            }
-        }.navigationTitle("Settings")
+            Toggle("Save Scan Results", isOn: $saveScanResults).toggleStyle(.switch).padding(3)
+            Toggle("Share Crash Reports", isOn: $sendCrashReport).toggleStyle(.switch).padding(3)
+        }
+        .padding()
+        .frame(maxHeight: .infinity,alignment: .top)
+        .navigationTitle("Settings")
+        
     }
 }
 

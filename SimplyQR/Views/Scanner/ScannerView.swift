@@ -20,6 +20,7 @@ struct ScannerView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var scanhistories: FetchedResults<ScanHistory>
     
+    @Preference(\.saveScanResults) var saveScanResults
     
     // TODO: Implment handling links, etc
     var body: some View {
@@ -28,11 +29,13 @@ struct ScannerView: View {
         // Work on failure handling when scan code is malformed etc
         // Make the UI nicer and figure out why there is a slight hick-up whenever selecting photo picker
         NavigationStack{
-                CodeScannerView(codeTypes: SettingsViewModel().scanTypes,scanMode: .continuous, scanInterval: 1.5 ,isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
+                CodeScannerView(codeTypes: [.qr,.dataMatrix,.microQR,.pdf417,.microPDF417,.gs1DataBar],scanMode: .continuous, scanInterval: 1.5 ,isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
                     if case let .success(result) = response {
                         scannedCode = result.string
                         // Create a check for if history is enabled of disabled
-                        createScanRecord(name: nil, scandata: scannedCode!, date: Date())
+                        if(saveScanResults) {
+                            createScanRecord(name: nil, scandata: scannedCode!, date: Date())
+                        }
                         isPresentingAlert = true
                     }
             }.alert(scannedCode ?? "Nill" /* Should Never Happen when presenting is true */, isPresented: $isPresentingAlert) {
