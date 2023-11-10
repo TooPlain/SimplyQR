@@ -8,36 +8,24 @@
 import SwiftUI
 import AVFoundation
 
+
+// Since learning about coredata I believe we can store our settings a in a coredata entity and with how easy it is to use should be easy to impl
+// TODO: Using CoreData to store setting values
 struct SettingsView: View {
     @StateObject private var viewModel = SettingsViewModel()
     
     let scanTypeString: [String] = [".qr",".dataMatrix",".microQR",".pdf417",".microPDF417",".gs1DataBar"]
     let scanTypeSelection: [AVMetadataObject.ObjectType] = [.qr,.dataMatrix,.microQR,.pdf417,.microPDF417,.gs1DataBar]
+    
     private func scanTypeIsSelected(selected: AVMetadataObject.ObjectType) -> Bool {
         viewModel.scanTypesString.contains(selected.rawValue) == true
     }
-    //AVMetadataObject.ObjectType(rawValue: selected)
+    
+    
     var body: some View {
         VStack {
             List {
                 Text("Hello, Expect Settings in here :3").monospaced()
-//                HStack {
-//                    ForEach(scanTypeSelection, id: \.self) { string in
-//                        
-//                        Button(string.rawValue) {
-//                            if scanTypeIsSelected(selected: string) {
-//                                viewModel.removeScanType(text: string)
-//                            } else {
-//                                viewModel.addScanType(text: string)
-//                            }
-//                        }
-//                        .font(.headline)
-//                        .buttonStyle(.borderedProminent)
-//                        .tint(scanTypeIsSelected(selected: string) ? .green : .red)
-//                    }
-//                }
-                
-                
             }
         }.navigationTitle("Settings")
     }
