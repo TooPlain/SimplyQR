@@ -16,18 +16,6 @@ struct ScanHistoryView: View {
     
 
     var body: some View {
-
-            // TODO: Create a clear all button and create a modal interface for results
-//            List(scanhistories) { scanhistory in
-//                if(scanhistory.id != nil) {
-//                    VStack(alignment: .leading) {
-//                        //Text(scanhistory.id?.uuidString  ?? "ID Invalid")
-//                        Text(scanhistory.scantime?.formatted() ?? "Invalid Date").monospaced()
-//                        Text(scanhistory.scancontent ?? "Scan Content N/A")
-//                    }
-//                }
-//            }
-        
         VStack {
             ScrollView(.vertical, showsIndicators: true) {
                 VStack {
