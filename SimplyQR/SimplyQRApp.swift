@@ -42,10 +42,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct SimplyQRApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var dataController = DataController()
     
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

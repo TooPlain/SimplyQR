@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E5B78D42AFE3D2B00A72E20 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B78D32AFE3D2B00A72E20 /* DataController.swift */; };
 		4E9936A62AEFC15D001C31FA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936A52AEFC15D001C31FA /* MainTabView.swift */; };
 		4E9936AA2AEFC27C001C31FA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936A92AEFC27C001C31FA /* SettingsView.swift */; };
 		4E9936B02AEFC5BB001C31FA /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936AF2AEFC5BB001C31FA /* ScannerView.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E5B78D32AFE3D2B00A72E20 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4E9936A52AEFC15D001C31FA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		4E9936A92AEFC27C001C31FA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4E9936AF2AEFC5BB001C31FA /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E5B78D22AFE3D0100A72E20 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4E5B78D32AFE3D2B00A72E20 /* DataController.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		4E9936A22AEFC0F4001C31FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 		4EDE55002AE7DD34002386E7 /* SimplyQR */ = {
 			isa = PBXGroup;
 			children = (
+				4E5B78D22AFE3D0100A72E20 /* Utilities */,
 				4E9936BA2AEFD1E4001C31FA /* History */,
 				4E9936B72AEFD160001C31FA /* ScanData */,
 				4E9936A22AEFC0F4001C31FA /* Views */,
@@ -266,6 +277,7 @@
 				4E9936C02AEFD539001C31FA /* ScanHistoryViewModel.swift in Sources */,
 				4E9936C32AEFD589001C31FA /* SettingsViewModel.swift in Sources */,
 				4E9936B92AEFD17B001C31FA /* ScanDataModel.swift in Sources */,
+				4E5B78D42AFE3D2B00A72E20 /* DataController.swift in Sources */,
 				4E9936A62AEFC15D001C31FA /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
