@@ -34,7 +34,7 @@ Sorted by Priority (High to Low)
 
 - Fine Tune History View
 - Create a Settings View - In Progress
-- Anaylze CodeScanner and see how it works under the hood so I can create my own impl
+- Analyze CodeScanner and see how it works under the hood so I can create my own impl
 - Implement a error handling/crashlytics
 - Maybe a update check
 
