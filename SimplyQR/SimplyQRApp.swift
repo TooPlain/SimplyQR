@@ -11,6 +11,10 @@ import SwiftUI
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // TODO: add crashlytics and it appears we might have to add firebase as a whole to use crash monitoring
+        //DEBUG Clear launch screen cache Will be removed once launch screen is complete
+        try! FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Library/SplashBoard")
+        
+        // DEBUG END
         return true
     }
     
@@ -63,4 +67,16 @@ extension Bundle {
     var releaseVersionNumberPretty: String {
         return "v\(releaseVersionNumber ?? "1.0.0")"
     }
+}
+
+public extension UIApplication {
+
+    func clearLaunchScreenCache() {
+        do {
+            try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Library/SplashBoard")
+        } catch {
+            print("Failed to delete launch screen cache: \(error)")
+        }
+    }
+
 }

@@ -17,14 +17,16 @@ struct ScannerView: View {
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var isTorchOn = false
     @Environment(\.managedObjectContext) var moc
+    
+    //let sort = NSSortDescriptor(key: "date_", ascending: true)
+    @FetchRequest(sortDescriptors: []) var scanhistories: FetchedResults<ScanHistory>
+    
+
 
     //Maybe since we have a tab bar call this view directly?
 
     // TODO: Implment handling links, etc
     var body: some View {
-        
-        let scanhistory = ScanHistory(context: moc)
-        
         // For now a dialog with the scanned information for display and the option to copy to clipboard.
         // Will add like a built in web browser view or handle if the text is a link for an app (eg discord,crypto wallet, etc)
         // Work on failure handling when scan code is malformed etc
@@ -33,10 +35,7 @@ struct ScannerView: View {
                 CodeScannerView(codeTypes: SettingsViewModel().scanTypes,scanMode: .continuous, scanInterval: 1.5 ,isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
                     if case let .success(result) = response {
                         scannedCode = result.string
-                        scanhistory.id = UUID()
-                        scanhistory.scancontent = scannedCode
-                        scanhistory.scantime = Date()
-                        try? moc.save()
+                        createScanRecord(name: nil, scandata: scannedCode!, date: Date())
                         // Create history record here
                         isPresentingAlert = true
                     }
@@ -70,7 +69,17 @@ struct ScannerView: View {
             }
         }
     }
+    
+    func createScanRecord(name: String?,scandata: String,date: Date) {
+        let record = ScanHistory(context: moc)
+        record.id = UUID()
+        record.name = name
+        record.scancontent = scandata
+        record.scantime = date
+        try? moc.save()
+    }
 }
+
 
 #Preview {
     ScannerView()
