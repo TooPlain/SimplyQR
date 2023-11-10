@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E5B78D42AFE3D2B00A72E20 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B78D32AFE3D2B00A72E20 /* DataController.swift */; };
 		4E5B78D72AFE3F3E00A72E20 /* SimplyQR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B78D52AFE3F3E00A72E20 /* SimplyQR.xcdatamodeld */; };
+		4E5B78E32AFE6BD400A72E20 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B78E22AFE6BD400A72E20 /* ColorExt.swift */; };
 		4E9936A62AEFC15D001C31FA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936A52AEFC15D001C31FA /* MainTabView.swift */; };
 		4E9936AA2AEFC27C001C31FA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936A92AEFC27C001C31FA /* SettingsView.swift */; };
 		4E9936B02AEFC5BB001C31FA /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9936AF2AEFC5BB001C31FA /* ScannerView.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		4E5B78D32AFE3D2B00A72E20 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4E5B78D62AFE3F3E00A72E20 /* SimplyQR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimplyQR.xcdatamodel; sourceTree = "<group>"; };
+		4E5B78E22AFE6BD400A72E20 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		4E9936A52AEFC15D001C31FA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		4E9936A92AEFC27C001C31FA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4E9936AF2AEFC5BB001C31FA /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5B78D32AFE3D2B00A72E20 /* DataController.swift */,
+				4E5B78E22AFE6BD400A72E20 /* ColorExt.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				4E9936B92AEFD17B001C31FA /* ScanDataModel.swift in Sources */,
 				4E5B78D42AFE3D2B00A72E20 /* DataController.swift in Sources */,
 				4E9936A62AEFC15D001C31FA /* MainTabView.swift in Sources */,
+				4E5B78E32AFE6BD400A72E20 /* ColorExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

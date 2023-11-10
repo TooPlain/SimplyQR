@@ -15,24 +15,45 @@ struct ScanHistoryView: View {
     
 
     var body: some View {
-        VStack {
+
             // TODO: Create a clear all button and create a modal interface for results
-            List(scanhistories) { scanhistory in
-                if(scanhistory.id != nil) {
-                    VStack(alignment: .leading) {
-                        //Text(scanhistory.id?.uuidString  ?? "ID Invalid")
-                        Text(scanhistory.scantime?.formatted() ?? "Invalid Date").monospaced()
-                        Text(scanhistory.scancontent ?? "Scan Content N/A")
+//            List(scanhistories) { scanhistory in
+//                if(scanhistory.id != nil) {
+//                    VStack(alignment: .leading) {
+//                        //Text(scanhistory.id?.uuidString  ?? "ID Invalid")
+//                        Text(scanhistory.scantime?.formatted() ?? "Invalid Date").monospaced()
+//                        Text(scanhistory.scancontent ?? "Scan Content N/A")
+//                    }
+//                }
+//            }
+        VStack {
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack {
+                    ForEach(scanhistories) { scanhistory in
+                        if(scanhistory.id != nil) {
+                            VStack(alignment: .leading) {
+                                //Text(scanhistory.id?.uuidString  ?? "ID Invalid")
+                                Text(scanhistory.scantime?.formatted() ?? "Invalid Date").monospaced()
+                                Text(scanhistory.scancontent ?? "Scan Content N/A")
+                            }
+                            .frame(width: 350,height: 100)
+                            .padding(5)
+                            .background(Color.indigo)
+                            .cornerRadius(10)
+                        }
                     }
                 }
             }
-            
-            Section {
-                // TODO: Clear All History
-            }
-            
-            
+            Button("Delete All", role: .destructive) {
+                deleteAll()
+            }.buttonStyle(.borderedProminent)
         }.navigationTitle("History")
+    }
+    
+    func deleteAll() {
+        for obj in scanhistories {
+            moc.delete(obj)
+        }
     }
 }
 
