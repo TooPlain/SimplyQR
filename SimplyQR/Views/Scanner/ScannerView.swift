@@ -16,11 +16,14 @@ struct ScannerView: View {
     @State private var isPresetingPicker = false
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var isTorchOn = false
+    @Environment(\.managedObjectContext) var moc
 
     //Maybe since we have a tab bar call this view directly?
 
     // TODO: Implment handling links, etc
     var body: some View {
+        
+        let scanhistory = ScanHistory(context: moc)
         
         // For now a dialog with the scanned information for display and the option to copy to clipboard.
         // Will add like a built in web browser view or handle if the text is a link for an app (eg discord,crypto wallet, etc)
@@ -30,6 +33,10 @@ struct ScannerView: View {
                 CodeScannerView(codeTypes: SettingsViewModel().scanTypes,scanMode: .continuous, scanInterval: 1.5 ,isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
                     if case let .success(result) = response {
                         scannedCode = result.string
+                        scanhistory.id = UUID()
+                        scanhistory.scancontent = scannedCode
+                        scanhistory.scantime = Date()
+                        try? moc.save()
                         // Create history record here
                         isPresentingAlert = true
                     }
