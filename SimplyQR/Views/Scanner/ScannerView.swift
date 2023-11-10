@@ -29,7 +29,7 @@ struct ScannerView: View {
         // Work on failure handling when scan code is malformed etc
         // Make the UI nicer and figure out why there is a slight hick-up whenever selecting photo picker
         NavigationStack{
-                CodeScannerView(codeTypes: [.qr,.dataMatrix,.microQR,.pdf417,.microPDF417,.gs1DataBar],scanMode: .continuous, scanInterval: 1.5 ,isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
+                CodeScannerView(codeTypes: [.qr,.dataMatrix,.microQR,.pdf417,.microPDF417,.gs1DataBar],scanMode: .oncePerCode, scanInterval: 1.5 ,isTorchOn: isTorchOn, isGalleryPresented: $isPresetingPicker) { response in
                     if case let .success(result) = response {
                         scannedCode = result.string
                         // Create a check for if history is enabled of disabled

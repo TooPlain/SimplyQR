@@ -21,6 +21,7 @@ Thanks for stopping by and checking out my project!
 11/10
 - History view and Data Controller for handling CoreData done for the most part, would like to tweak the Ui/Ux for a nicer look
 - Some small bug fixes and created a launch screen
+- Preferences added
 
 10/30 
 - Starting history view deciding if we should store history as a user object in firebase or just locally like in a db leaning towards the latter.
@@ -32,11 +33,13 @@ Will have to learn more to eventually implement my own scanning functionality.
 # TODO
 Sorted by Priority (High to Low)
 
-- Fine Tune History View
+- Fine Tune History View (make it look awesome!)
+- Find out what is causing the stutter/lag when opening the photo picker
+- Handle web urls and opening of apps related to the scanned result
 - Create a Settings View - In Progress
-- Analyze CodeScanner and see how it works under the hood so I can create my own impl
 - Implement a error handling/crashlytics
-- Maybe a update check
+- Analyze CodeScanner and see how it works under the hood so I can create my own impl
+- Maybe a update check (Not really needed since simple app)
 
 
 # Credits
