@@ -1,10 +1,12 @@
 # SimplyQR
 [![wakatime](https://wakatime.com/badge/user/9cabb579-a7c5-4976-a214-8ca4b23bcbc9/project/018b6160-536f-4c0b-ae6c-66247ad167ae.svg)](https://wakatime.com/badge/user/9cabb579-a7c5-4976-a214-8ca4b23bcbc9/project/018b6160-536f-4c0b-ae6c-66247ad167ae)
 
+* THIS IS A WIP * 
+
 Simply(no tracking/ads) a Open Source Swift-powered QR Code reader with the future option to also scan existing photos from your phone, I do
 hope to eventually include other barcode standards that might be useful in a offline context.
 
-Targets iOS 17.0+ mainly for the security updates I got to keep the end user secure! its a new age of tech and 0days be endless
+Targets iOS 17.0+ mainly for the security updates I got to keep the end user secure! it's a new age of tech/smart devices and 0days be endless
 
 After some thinking I'm leaning towards using functions provided by apple to store scan history and handle crash analytics iirc I think they do provide that service, Instead of using firebase.
 
@@ -15,6 +17,7 @@ Once sort of complete will publish to the app store - way too many ad infested q
 
 Thanks for stopping by and checking out my project!
 
+* THIS IS A WIP *
 
 # Timeline
 
@@ -27,19 +30,18 @@ Thanks for stopping by and checking out my project!
 - Starting history view deciding if we should store history as a user object in firebase or just locally like in a db leaning towards the latter.
 - PhotoPicker input works now.
 - Basic Scanner works with thanks to the folks at hacking swift via there CodeScanner Lib, 
-Will have to learn more to eventually implement my own scanning functionality.
+Will like to learn more to eventually implement my own scanning functionality.
 
 
 # TODO
 Sorted by Priority (High to Low)
 
 - Fine Tune History View (make it look awesome!)
-- Find out what is causing the stutter/lag when opening the photo picker
+- Find out what is causing the stutter/lag when opening the photo picker - most likely caused by the lib recursing I feel like.
 - Handle web urls and opening of apps related to the scanned result
 - Create a Settings View - In Progress
 - Implement a error handling/crashlytics
-- Analyze CodeScanner and see how it works under the hood so I can create my own impl
-- Maybe a update check (Not really needed since simple app)
+- Once base features are completed start implementing a code scanning logic to replace the 3rd party lib.
 
 
 # Credits
